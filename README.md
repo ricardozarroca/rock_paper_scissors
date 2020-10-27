@@ -1,2 +1,3 @@
 # rock_paper_scissors
 Project to develop, very simplified, the rock paper scissors game.
+This project is part of Odin Project's path to learning web development.
