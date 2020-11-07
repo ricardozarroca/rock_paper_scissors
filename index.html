@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Project</title>
+  </head>
+  <body>
+    <h1>Rock Scissors Paper Project</h1>
+    <h2>Open Console to Play</h2>
+    <p>To play a single game against the computer, type "oneRound()" on the console an return.</p>
+    <p>To play a 5 rounds game against the computer, type "game()" on the console an return.</p>
+    <script>
+
+    /*
+    General Idea:
+    Player pick one of three option rock, paper or scissors
+    Computer pick any of those options randomly
+    It must compare the choises and return whos the winner
+    The winner grants 1 point
+    The best of 5 wins
+    */
+      let playerSelection = 'rock';
+      let computerSelection = computerMove();
+      let playerScore = 0;
+      let computerScore = 0;
+
+      function computerMove () {
+
+        let randomNum = Math.random();
+        if (randomNum <= 0.33) {
+          return "rock";
+        } else if (randomNum > 0.33 && randomNum < 0.66) {
+          return "paper";
+        } else {
+          return "scissors"
+        }
+      }
+
+      function playerMove () {
+
+        let caseChoise = window.prompt(`Choose between Rock, Paper or Scissors` , `rock`);
+        return caseChoise.toLowerCase();
+      }
+
+      function oneRound () {
+
+        playerSelection = playerMove();
+        computerSelection = computerMove();
+
+        if (playerSelection === computerSelection) {
+          console.log(`Computer chose ${computerSelection}. It's a Tie!!`);
+        } else if ((playerSelection === 'rock' && computerSelection === 'scissors')
+        || (playerSelection === 'paper' && computerSelection === 'rock')
+        || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+          playerScore++;
+          console.log(`Computer chose ${computerSelection}. You Win!!`);
+        } else {
+          computerScore++;
+          console.log(`Computer chose ${computerSelection}. You Lost!!`);
+        }
+      }
+
+      function game() {
+
+        playerScore = 0;
+        computerScore = 0;
+
+        for (let i = 0; i < 5; i++) {
+        oneRound();
+        console.log(`Your score is ${playerScore}`);
+        console.log(`Computer score is ${computerScore}`);
+        }
+
+        if (playerScore>computerScore) {
+          console.log('YOU HAVE WON THE GAME.. CONGRATS!!');
+        } else if (playerScore<computerScore) {
+          console.log('COMPUTER HAVE WON THE GAME.. SORRY.')
+        } else {
+          console.log('THE GAME ENDED IN A DRAW!!')
+        }
+      }
+
+    </script>
+  </body>
+</html>
