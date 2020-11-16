@@ -10,7 +10,6 @@
     <p>To play a single game against the computer, type "oneRound()" on the console an return.</p>
     <p>To play a 5 rounds game against the computer, type "game()" on the console an return.</p>
     <script>
-
     /*
     General Idea:
     Player pick one of three option rock, paper or scissors
@@ -49,9 +48,9 @@
 
         if (playerSelection === computerSelection) {
           console.log(`Computer chose ${computerSelection}. It's a Tie!!`);
-        } else if ((playerSelection === 'rock' && computerSelection === 'scissors')
-        || (playerSelection === 'paper' && computerSelection === 'rock')
-        || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+        } else if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
+            (playerSelection === 'paper' && computerSelection === 'rock') ||
+            (playerSelection === 'scissors' && computerSelection === 'paper')) {
           playerScore++;
           console.log(`Computer chose ${computerSelection}. You Win!!`);
         } else {
@@ -71,9 +70,9 @@
         console.log(`Computer score is ${computerScore}`);
         }
 
-        if (playerScore>computerScore) {
+        if (playerScore > computerScore) {
           console.log('YOU HAVE WON THE GAME.. CONGRATS!!');
-        } else if (playerScore<computerScore) {
+        } else if (playerScore < computerScore) {
           console.log('COMPUTER HAVE WON THE GAME.. SORRY.')
         } else {
           console.log('THE GAME ENDED IN A DRAW!!')
