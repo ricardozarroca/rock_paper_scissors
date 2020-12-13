@@ -3,26 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors Project</title>
+    <link href='style.css' rel="stylesheet">
   </head>
   <body>
 
 
     <h1>Rock Scissors Paper Project</h1>
 
-    <div>
-      <button type="button" class="reset">Play / Reset Game</button>
+    <button type="button" class="reset">Play / Reset Game</button>
 
-      <div class="game">
-        <button type="button" name="rock" class="choise">Rock</button>
-        <button type="button" name="scissors" class="choise">Scissors</button>
-        <button type="button" name="paper" class="choise">Paper</button>
-        <p id="computerChoose"></p>
-        <p id="theWinner"></p>
+      <div class="playcontainer">
+        <div class="playbox1">
+          <button type="button" name="rock" class="choise">Rock</button>
+          <button type="button" name="scissors" class="choise">Scissors</button>
+          <button type="button" name="paper" class="choise">Paper</button>
+        </div>
+        <div class="playbox2">
+          <p id="computerChoose"></p>
+          <p id="theWinner"></p>
+        </div>
       </div>
 
-    </div>
-
-    <div class="score">
+    <div class="resultscontainer">
       <p id="roundNumber"></p>
       <p id="playerScore"></p>
       <p id="computerScore"></p>

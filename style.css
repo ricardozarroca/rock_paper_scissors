@@ -1,0 +1,55 @@
+html {
+  background-image: linear-gradient(rgb(235, 235, 235), rgb(36, 55, 77));
+  height: 100%;
+}
+
+h1 {
+  margin: 1em;
+  text-align: center;
+  font-style: italic;
+}
+
+.reset {
+  position: relative;
+  width: 50%;
+  left:25%;
+  margin-bottom: 2em;
+}
+
+button {
+ background-color: rgba(180, 165, 20, 0.75);
+ border-radius: 5px;
+ height: 50px;
+ font-size: 1.5em;
+ font-family: monospace;
+}
+
+p {
+  font-size: 1.2em;
+  padding-left: 2vw;
+}
+
+.playcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.playbox1 {
+  flex: 1 1 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1vw;
+}
+
+.playbox2 {
+  flex: 2 1 30%;
+  width: 30%;
+}
+
+#theWinner, #end {
+  font-style: italic;
+  font-weight: bold;
+
+}
